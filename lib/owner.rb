@@ -1,4 +1,3 @@
-require "pry"
 class Owner
   attr_reader :name, :species
 
@@ -57,7 +56,6 @@ class Owner
   def sell_pets
     pets = self.dogs + self.cats
     pets.map do |pet|
-      # binding.pry
       pet.mood = "nervous"
       pet.owner = nil
     end
